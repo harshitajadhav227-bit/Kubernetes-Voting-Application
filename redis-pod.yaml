@@ -1,13 +1,15 @@
-apiVersion : v1
+apiVersion: v1
 kind: Pod
+
 metadata:
   name: redis-pod
   labels:
     name: redis-pod
     app: demo-voting-app
+
 spec:
   containers:
   - name: redis
     image: redis
     ports:
-      - containers: 6379
+    - containerPort: 6379
