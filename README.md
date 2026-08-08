@@ -50,8 +50,6 @@ Once everything is running, access the applications using your Multipass VM IP:
 Voting App  → http://<VM_IP>:30004
 Result App  → http://<VM_IP>:30005
 
-
-Add your Voting App, Result App, and Kubernetes screenshots here.
 🔮 What's Next?
 I plan to take this project further by replacing NodePort with Ingress, adding persistent volumes for PostgreSQL, introducing CI/CD automation, and integrating Prometheus and Grafana for monitoring.
 
