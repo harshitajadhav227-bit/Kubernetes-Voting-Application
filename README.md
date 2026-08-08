@@ -1,11 +1,3 @@
-
-
-https://github.com/user-attachments/assets/7f29f8a6-4a0a-4fe1-81a1-f2a623d41323
-
-
-
-https://github.com/user-attachments/assets/c97072fa-a91c-4724-b691-27284d6ed98b
-
 # ☸️ Kubernetes Voting Application
 
 A complete microservices-based voting application deployed on a local Kubernetes cluster using Multipass. The project demonstrates how multiple services can work together with Redis for temporary vote storage, a Worker for asynchronous processing, and PostgreSQL for persistent results.
@@ -41,9 +33,6 @@ Deploy the components in the following order:
 
 ```bash
 
-https://github.com/user-attachments/assets/f6372542-93da-49b7-9ec4-59ecb7c96098
-
-
 kubectl apply -f redis/
 kubectl apply -f postgres/
 kubectl apply -f voting-app/
@@ -55,7 +44,9 @@ kubectl get svc
 Once everything is running, access the applications using your Multipass VM IP:
 Voting App  → http://<VM_IP>:30004
 Result App  → http://<VM_IP>:30005
+
 📸 Preview
+https://github.com/user-attachments/assets/c97072fa-a91c-4724-b691-27284d6ed98b
 
 Add your Voting App, Result App, and Kubernetes screenshots here.
 🔮 What's Next?
