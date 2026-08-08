@@ -1,3 +1,8 @@
+📸 Preview
+
+
+https://github.com/user-attachments/assets/43754c39-5577-4486-bea9-18d2979b2574
+
 # ☸️ Kubernetes Voting Application
 
 A complete microservices-based voting application deployed on a local Kubernetes cluster using Multipass. The project demonstrates how multiple services can work together with Redis for temporary vote storage, a Worker for asynchronous processing, and PostgreSQL for persistent results.
@@ -26,9 +31,6 @@ A complete microservices-based voting application deployed on a local Kubernetes
 I built this project to understand how a real microservices application behaves inside Kubernetes rather than running everything as a single application. The Voting App receives votes and pushes them to Redis, where the Worker processes them asynchronously and stores the results in PostgreSQL. A separate Result App then retrieves and displays the processed results.
 
 While deploying the project, I also worked through practical Kubernetes challenges including ARM image compatibility, pod scheduling, YAML configuration issues, Flannel networking, and accessing NodePort services from outside the cluster.
-
-📸 Preview
-https://github.com/user-attachments/assets/c97072fa-a91c-4724-b691-27284d6ed98b
 
 ## 🟢 Running the Project
 
