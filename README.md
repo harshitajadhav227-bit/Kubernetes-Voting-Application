@@ -27,6 +27,9 @@ I built this project to understand how a real microservices application behaves 
 
 While deploying the project, I also worked through practical Kubernetes challenges including ARM image compatibility, pod scheduling, YAML configuration issues, Flannel networking, and accessing NodePort services from outside the cluster.
 
+📸 Preview
+https://github.com/user-attachments/assets/c97072fa-a91c-4724-b691-27284d6ed98b
+
 ## 🟢 Running the Project
 
 Deploy the components in the following order:
@@ -51,5 +54,3 @@ Add your Voting App, Result App, and Kubernetes screenshots here.
 I plan to take this project further by replacing NodePort with Ingress, adding persistent volumes for PostgreSQL, introducing CI/CD automation, and integrating Prometheus and Grafana for monitoring.
 
 
-📸 Preview
-https://github.com/user-attachments/assets/c97072fa-a91c-4724-b691-27284d6ed98b
