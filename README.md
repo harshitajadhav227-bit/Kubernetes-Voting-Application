@@ -1,3 +1,49 @@
-## Project Overview
+# ☸️ Kubernetes Voting Application
 
-This project is a containerized, microservices-based voting application deployed on a Kubernetes cluster running on Ubuntu through Multipass. The application consists of multiple services, including a Voting App for collecting user votes, Redis for temporary vote storage, a Worker service for processing votes, PostgreSQL for persistent data storage, and a Result App for displaying voting results. Kubernetes Pods and Services are used to deploy and connect the different application components, while Flannel provides networking between Pods. The project involved setting up and configuring a Kubernetes cluster, deploying applications using YAML manifests, configuring container networking, troubleshooting container runtime and CNI issues, and exposing applications through Kubernetes NodePort services. Through this project, I gained practical hands-on experience with Kubernetes, Docker, container networking, service discovery, troubleshooting, YAML-based deployments, and fundamental DevOps practices.
+A complete microservices-based voting application deployed on a local Kubernetes cluster using Multipass. The project demonstrates how multiple services can work together with Redis for temporary vote storage, a Worker for asynchronous processing, and PostgreSQL for persistent results.
+
+## ✨ Technologies
+
+- Kubernetes
+- Docker
+- Node.js
+- Redis
+- PostgreSQL
+- Multipass
+- Flannel
+
+## 🚀 Features
+
+- Voting application accessible through Kubernetes NodePort
+- Asynchronous vote processing using Redis and Worker
+- Persistent result storage with PostgreSQL
+- Separate services for voting and results
+- Containerized microservices running inside Kubernetes
+- Hands-on Kubernetes networking and troubleshooting
+
+## 📌 The Process
+
+I built this project to understand how a real microservices application behaves inside Kubernetes rather than running everything as a single application. The Voting App receives votes and pushes them to Redis, where the Worker processes them asynchronously and stores the results in PostgreSQL. A separate Result App then retrieves and displays the processed results.
+
+While deploying the project, I also worked through practical Kubernetes challenges including ARM image compatibility, pod scheduling, YAML configuration issues, Flannel networking, and accessing NodePort services from outside the cluster.
+
+## 🟢 Running the Project
+
+Deploy the components in the following order:
+
+```bash
+kubectl apply -f redis/
+kubectl apply -f postgres/
+kubectl apply -f voting-app/
+kubectl apply -f worker/
+kubectl apply -f result-app/
+Check the running resources:
+kubectl get pods
+kubectl get svc
+Once everything is running, access the applications using your Multipass VM IP:
+Voting App  → http://<VM_IP>:30004
+Result App  → http://<VM_IP>:30005
+📸 Preview
+Add your Voting App, Result App, and Kubernetes screenshots here.
+🔮 What's Next?
+I plan to take this project further by replacing NodePort with Ingress, adding persistent volumes for PostgreSQL, introducing CI/CD automation, and integrating Prometheus and Grafana for monitoring.
