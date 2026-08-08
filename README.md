@@ -32,6 +32,10 @@ While deploying the project, I also worked through practical Kubernetes challeng
 Deploy the components in the following order:
 
 ```bash
+
+https://github.com/user-attachments/assets/f6372542-93da-49b7-9ec4-59ecb7c96098
+
+
 kubectl apply -f redis/
 kubectl apply -f postgres/
 kubectl apply -f voting-app/
@@ -44,6 +48,7 @@ Once everything is running, access the applications using your Multipass VM IP:
 Voting App  → http://<VM_IP>:30004
 Result App  → http://<VM_IP>:30005
 📸 Preview
+
 Add your Voting App, Result App, and Kubernetes screenshots here.
 🔮 What's Next?
 I plan to take this project further by replacing NodePort with Ingress, adding persistent volumes for PostgreSQL, introducing CI/CD automation, and integrating Prometheus and Grafana for monitoring.
